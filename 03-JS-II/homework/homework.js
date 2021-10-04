@@ -9,7 +9,7 @@ function obtenerMayor(x, y) {
               return x;
         }else if (y > x){
               return y;
-        }else if(x = y){
+        }else if(x === y){
               return x;
         }
 }
@@ -158,16 +158,18 @@ function operadoresLogicos(num1, num2, num3) {
     // Pista: un número primo solo es divisible por sí mismo y por 1
     // Pista 2: Puedes resolverlo usando un bucle `for`
     // Nota: Los números 0 y 1 NO son considerados números primos
-    
+          if (numero===1 || numero === 0){
+            return false;
+          }
 
-                for (var i = 2; i < numero; i++) {
+                    for (var i = 2; i < numero; i++) {
+                        
+                      if (numero % i === 0 ) {
+                        return false;
+                      }
+                    }  
                     
-                  if (numero % i === 0 ) {
-                    return false;
-                  }else if(numero % i !== 0){
-                        return true;
-                  }  
-                }
+                            return true;
     
   }
 
@@ -186,13 +188,13 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-                var tablaDelSeis = 6;
-                          
-                      if (tablaDelSeis = 6){
-                          for( var i = 0 ; i < 61 ; i++){
-                                console.log(tablaDelSeis * i);
-                          } 
-                      }  
+                var resultado = [];
+                                        
+                                    
+                for( var i = 0 ; i <= 10 ; i++){
+                      resultado.push (6* i);
+                } 
+                  return resultado;
 }
 
 function tieneTresDigitos(numero){
@@ -210,6 +212,14 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+                        var i = 0;
+                        do {
+                          i = i + 1        
+                        numero =5 + numero;
+                                  
+                        } while (i <8);
+                                return numero
+
 }
 
 
